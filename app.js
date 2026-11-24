@@ -21,7 +21,7 @@ let moviesData;
 async function renderMovies(search, filter) {
   moviesWrapperElement.classList += " loading";
   const movies = await fetch(
-    `http://www.omdbapi.com/?apikey=f473479b&s=${search}`,
+    `https://www.omdbapi.com/?apikey=f473479b&s=${search}`,
   );
   moviesData = await movies.json();
   moviesWrapperElement.classList.remove("loading");
